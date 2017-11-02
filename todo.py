@@ -3,7 +3,6 @@
 
 # This is a very simple to-do list for Android. Requires QPython3 (download it from Google Play Market).
 
-import os    
 from androidhelper import Android
 droid = Android()
 
