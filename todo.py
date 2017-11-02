@@ -6,7 +6,7 @@
 from androidhelper import Android
 droid = Android()
 
-# Find local path on Android 
+# Find absolute path on Android 
 path=droid.environment()[1]["download"][:droid.environment()[1]["download"].index("/Download")] + "/qpython/scripts3/tasks.txt"
 
 def dialog_list(options):
@@ -44,7 +44,7 @@ while 1:
         with open(path) as file:
             tasks=file.readlines()
     except:
-        droid.toast("File %s not found or opening error" % path)  
+        droid.makeToast("File %s not found or opening error" % path)  
         tasks=[]
     
     # Show tasks and wait for user response
@@ -56,6 +56,7 @@ while 1:
     if "item" in response: # delete individual task
         del tasks[response["item"]]
         droid.vibrate(200)
+        droid.makeToast("Дело сделано!")
         droid.ttsSpeak("Дело сделано!")
             
     elif "which" in response:
