@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# This is a very simple to-do list for Android. Requires QPython3 (download it from Google Play Market).
+# This is a very simple to-do list for Android. Requires QPython3 to run (download it from Google Play Market).
 
 from androidhelper import Android
 droid = Android()
