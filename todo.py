@@ -51,8 +51,6 @@ while 1:
     response=dialog_list(tasks)
     
     # Process response
-    #if response==None: # click outside form
-    #    continue
     if "item" in response: # delete individual task
         del tasks[response["item"]]
         droid.vibrate(200)
